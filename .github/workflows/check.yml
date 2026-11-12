@@ -1,0 +1,13 @@
+name: Verify
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Install pinned tools
+        run: python3 tools/setup.py
+      - name: Format, types, behavior and publication boundary
+        run: python3 tools/check.py

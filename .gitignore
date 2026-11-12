@@ -1,0 +1,13 @@
+.tools/
+.artifacts/
+.env
+.env.*
+*.rbxl
+*.rbxlx
+*.rbxm
+*.rbxmx
+*.pem
+*.key
+*.log
+.DS_Store
+Thumbs.db
